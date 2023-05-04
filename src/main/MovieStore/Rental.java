@@ -1,3 +1,4 @@
+package main.MovieStore;
 class Rental {
     private Movie movie;
     private int daysRented;
