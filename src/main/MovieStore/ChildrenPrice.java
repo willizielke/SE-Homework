@@ -1,10 +1,10 @@
 package main.MovieStore;
 
-public class ChildrensPrice extends Price {
+public class ChildrenPrice extends Price {
 
     @Override
     int getPriceCode() {
-        return Movie.CHILDRENS;
+        return Movie.CHILDREN;
     }
 
     @Override
@@ -14,6 +14,5 @@ public class ChildrensPrice extends Price {
             result += (daysRented - 3) * 1.5;
         return result;
     }
-
 
 }

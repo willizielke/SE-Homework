@@ -7,15 +7,15 @@ class Customer {
     private String name;
     private Vector rentals = new Vector();
 
-    public Customer (String newname){
-        name = newname;
+    public Customer(String name) {
+        this.name = name;
     };
 
-    public void addRental(Rental arg) {
-        rentals.addElement(arg);
+    public void addRental(Rental rental) {
+        rentals.addElement(rental);
     };
 
-    public String getName (){
+    public String getName() {
         return name;
     };
 
@@ -27,10 +27,11 @@ class Customer {
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement();
 
-            //show figures for this rental
-            result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
+            // show figures for this rental
+            result += "\t" + each.getMovie().getTitle() + "\t" + "\t" + each.getDaysRented() + "\t"
+                    + String.valueOf(each.getCharge()) + "\n";
         }
-        //add footer lines
+        // add footer lines
         result += "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
         result += "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
         return result;
@@ -57,4 +58,3 @@ class Customer {
     }
 
 }
-    
